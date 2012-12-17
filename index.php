@@ -27,7 +27,10 @@
 			header("Location: User does not exist");
 			$err = "Incorrect username for student";
 		}
-	}	
+	}
+	elseif(isset($_POST['Create Account'])){
+		header("Location: CreateAccount.php");
+	}
 
 	else {
 		echo "<html>";
@@ -42,6 +45,7 @@
 		echo "<input name=\"password\" size=\"20\" maxlength=\"20\"/>";
 		echo "</p>";
 		echo "<input type=\"submit\" name=\"login\" value=\"Login\" />"; 
+		echo "<input type=\"submit\" name=\"CreateAccount\" value=\"CreateAccount\" />";
 		echo "</form>"; 
 		echo "</body>"; 
 		echo "</html>"; 
